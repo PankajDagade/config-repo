@@ -1,1 +1,21 @@
+global:
+    message: Welcome to Customer Prod envirnoment
+server:
+   port: 8083
+message: This is hello Prod!
 
+ # Database configuration (DMDS)
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cust_prod
+    username: root
+    password: root
+
+  # JPA & Hibernate configuration (LSFB)
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
