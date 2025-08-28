@@ -1,0 +1,7 @@
+global:
+    message: Welcome to Customer dev envirnoment
+server:
+   port: 8082
+message: This is hello dev!
+spring: 
+    datasource:
