@@ -3,5 +3,8 @@ global:
 server:
    port: 8082
 message: This is hello dev!
-spring: 
-    datasource:
+ datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cust_dev
+    username: root
+    password: root
