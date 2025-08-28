@@ -3,8 +3,19 @@ global:
 server:
    port: 8082
 message: This is hello dev!
- datasource:
+
+ # Database configuration (DMDS)
+  datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cust_dev
+    url: jdbc:mysql://localhost:3306/customer_master
     username: root
     password: root
+
+  # JPA & Hibernate configuration (LSFB)
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
