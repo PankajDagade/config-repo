@@ -1,19 +1,19 @@
-spring: 
-   application: 
-       name: customer-service
-
-#DMDS
 spring:
-   datasource.driver-class-name: com.mysql.cj.jdbc.Driver
-              url: jdbc:mysql://localhost:3306/enquiry_db
-              username: root
-              password: root
+  application:
+    name: customer-service
 
-#LSFB
-  jpa: 
-     properties:
-          hibernate: 
-              dialect: org.hibernate.dialect.MySQLDialect
-     show-sql: true
-     hibernate: 
-            ddl-auto: update
+  # Database configuration (DMDS)
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/enquiry_db
+    username: root
+    password: root
+
+  # JPA & Hibernate configuration (LSFB)
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
